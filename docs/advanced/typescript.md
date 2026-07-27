@@ -57,10 +57,10 @@ declare module "react" {
 
 Elena provides TypeScript examples for the following JavaScript frameworks:
 
-- **[Next.js](https://github.com/getelena/next-example-project)**
-- **[React](https://github.com/getelena/react-example-project)**
-- **[Svelte](https://github.com/getelena/svelte-example-project)**
-- **[Vue](https://github.com/getelena/vue-example-project)**
+- **[Next.js](https://github.com/arielsalminen/next-example-project)**
+- **[React](https://github.com/arielsalminen/react-example-project)**
+- **[Svelte](https://github.com/arielsalminen/svelte-example-project)**
+- **[Vue](https://github.com/arielsalminen/vue-example-project)**
 
 ## Authoring with TypeScript
 

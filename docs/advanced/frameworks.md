@@ -18,7 +18,7 @@ Since Elena ships as ES modules, you can load your components directly on a webp
 
 This registers all Elena components globally as standard HTML tags.
 
-**[View plain HTML example project →](https://github.com/getelena/html-example-project)**
+**[View plain HTML example project →](https://github.com/arielsalminen/html-example-project)**
 
 ## Eleventy
 
@@ -42,7 +42,7 @@ This registers all Elena components globally, making them available as standard 
 
 For server-side rendering with Eleventy, see [Pre-rendering with Eleventy](/advanced/ssr#pre-rendering-with-eleventy).
 
-**[View Eleventy example project →](https://github.com/getelena/eleventy-example-project)**
+**[View Eleventy example project →](https://github.com/arielsalminen/eleventy-example-project)**
 
 ## Next.js
 
@@ -89,7 +89,7 @@ declare module "react" {
 }
 ```
 
-**[View Next.js example project →](https://github.com/getelena/next-example-project)**
+**[View Next.js example project →](https://github.com/arielsalminen/next-example-project)**
 
 ## React
 
@@ -140,7 +140,7 @@ declare module "react/jsx-dev-runtime" {
 
 Make sure `tsconfig.json` includes the `src` directory, then restart the TypeScript server in your editor after adding the file.
 
-**[View React example project →](https://github.com/getelena/react-example-project)**
+**[View React example project →](https://github.com/arielsalminen/react-example-project)**
 
 ## Svelte
 
@@ -170,7 +170,7 @@ declare module "svelte/elements" {
 
 The [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) extension is required for template type checking.
 
-**[View Svelte example project →](https://github.com/getelena/svelte-example-project)**
+**[View Svelte example project →](https://github.com/arielsalminen/svelte-example-project)**
 
 ## Vue
 
@@ -207,7 +207,7 @@ declare module "vue" {
 
 The [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) extension is required for template type checking.
 
-**[View Vue example project →](https://github.com/getelena/vue-example-project)**
+**[View Vue example project →](https://github.com/arielsalminen/vue-example-project)**
 
 ## Angular
 
@@ -247,7 +247,7 @@ export class AppComponent {
 | Dynamic attribute | `[attr.variant]="value"`        |
 | Reactive state    | `signal()` from `@angular/core` |
 
-**[View Angular example project →](https://github.com/getelena/angular-example-project)**
+**[View Angular example project →](https://github.com/arielsalminen/angular-example-project)**
 
 > [!TIP]
 > The provided examples import the existing `@elenajs/components` for demo purposes. Replace it with your own component library for production usage.
