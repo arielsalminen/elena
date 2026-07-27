@@ -5,8 +5,8 @@ description: Critical rules for authoring Elena components. Component types, pro
 
 # Elena Authoring — Critical Rules
 
-> Full reference: https://getelena.github.io/elena/llms-full.txt
-> Page index: https://getelena.github.io/elena/llms.txt
+> Full reference: https://elenajs.com/llms-full.txt
+> Page index: https://elenajs.com/llms.txt
 
 ## Component types
 

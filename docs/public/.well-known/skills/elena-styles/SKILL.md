@@ -5,8 +5,8 @@ description: Critical CSS rules for Elena components. @scope encapsulation, all:
 
 # Elena Styles — Critical Rules
 
-> Full reference: https://getelena.github.io/elena/llms-full.txt
-> Page index: https://getelena.github.io/elena/llms.txt
+> Full reference: https://elenajs.com/llms-full.txt
+> Page index: https://elenajs.com/llms.txt
 
 ## @scope
 
