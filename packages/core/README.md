@@ -25,6 +25,13 @@
 
 <p align="center">Elena is a simple, tiny library for building <a href="https://elenajs.com/">Progressive Web Components</a>. Unlike most web component libraries, Elena doesn’t force JavaScript for everything. You can load HTML and CSS first, then use JavaScript to progressively add interactivity.</p>
 
+<br/>
+
+> [!NOTE]
+> **[github.com/arielsalminen/elena](https://github.com/arielsalminen/elena) is the official Elena repository.** The project moved here from `getelena/elena`, which no longer exists. As far as package usage goes, nothing has changed; `@elenajs/*` packages keep the same names, versioning, and npm organization.
+
+<br/>
+
 ## Features
 
 - 🔋 **Extremely lightweight:** 2.9kB minified & compressed, simple and tiny by design.
