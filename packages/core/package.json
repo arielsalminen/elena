@@ -18,11 +18,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/getelena/elena.git",
+    "url": "git+https://github.com/arielsalminen/elena.git",
     "directory": "packages/core"
   },
   "bugs": {
-    "url": "https://github.com/getelena/elena/issues"
+    "url": "https://github.com/arielsalminen/elena/issues"
   },
   "license": "MIT",
   "publishConfig": {
