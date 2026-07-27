@@ -306,7 +306,7 @@ For now, Declarative Shadow DOM is mainly useful when you need Shadow DOM style 
 
 Elena currently provides SSR examples for the following frameworks:
 
-- **[Eleventy](https://github.com/getelena/eleventy-example-project)**
-- **[Plain HTML](https://github.com/getelena/html-example-project)**
-- **[Next.js](https://github.com/getelena/next-example-project):** Elena can be used inside [React Server Components](https://github.com/getelena/next-example-project/blob/main/src/app/page.tsx)
+- **[Eleventy](https://github.com/arielsalminen/eleventy-example-project)**
+- **[Plain HTML](https://github.com/arielsalminen/html-example-project)**
+- **[Next.js](https://github.com/arielsalminen/next-example-project):** Elena can be used inside [React Server Components](https://github.com/arielsalminen/next-example-project/blob/main/src/app/page.tsx)
 `;
