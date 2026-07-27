@@ -88,19 +88,6 @@ export default defineConfig({
     ["link", { rel: "icon", href: "/favicon.svg", sizes: "any", type: "image/svg+xml" }],
     ["link", { rel: "apple-touch-icon", href: "/apple-touch-icon.png" }],
     ["link", { rel: "manifest", href: "/manifest.json" }],
-    ...(noIndex
-      ? []
-      : [
-          [
-            "script",
-            {
-              src: "https://cdn.usefathom.com/script.js",
-              "data-spa": "auto",
-              "data-site": "RRTFEBPA",
-              defer: "",
-            },
-          ],
-        ]),
   ],
   markdown: {
     headers: true,
@@ -148,47 +135,47 @@ export default defineConfig({
         items: [
           {
             text: "@elenajs/core",
-            link: "https://github.com/getelena/elena/tree/main/packages/core",
+            link: "https://github.com/arielsalminen/elena/tree/main/packages/core",
           },
           {
             text: "@elenajs/bundler",
-            link: "https://github.com/getelena/elena/tree/main/packages/bundler",
+            link: "https://github.com/arielsalminen/elena/tree/main/packages/bundler",
           },
           {
             text: "@elenajs/cli",
-            link: "https://github.com/getelena/elena/tree/main/packages/cli",
+            link: "https://github.com/arielsalminen/elena/tree/main/packages/cli",
           },
           {
             text: "@elenajs/ssr",
-            link: "https://github.com/getelena/elena/tree/main/packages/ssr",
+            link: "https://github.com/arielsalminen/elena/tree/main/packages/ssr",
           },
           {
             text: "@elenajs/components",
-            link: "https://github.com/getelena/elena/tree/main/packages/components",
+            link: "https://github.com/arielsalminen/elena/tree/main/packages/components",
           },
           {
             text: "@elenajs/plugin-cem-define",
-            link: "https://github.com/getelena/elena/tree/main/packages/plugin-cem-define",
+            link: "https://github.com/arielsalminen/elena/tree/main/packages/plugin-cem-define",
           },
           {
             text: "@elenajs/plugin-cem-prop",
-            link: "https://github.com/getelena/elena/tree/main/packages/plugin-cem-prop",
+            link: "https://github.com/arielsalminen/elena/tree/main/packages/plugin-cem-prop",
           },
           {
             text: "@elenajs/plugin-cem-tag",
-            link: "https://github.com/getelena/elena/tree/main/packages/plugin-cem-tag",
+            link: "https://github.com/arielsalminen/elena/tree/main/packages/plugin-cem-tag",
           },
           {
             text: "@elenajs/plugin-cem-typescript",
-            link: "https://github.com/getelena/elena/tree/main/packages/plugin-cem-typescript",
+            link: "https://github.com/arielsalminen/elena/tree/main/packages/plugin-cem-typescript",
           },
           {
             text: "@elenajs/plugin-rollup-css",
-            link: "https://github.com/getelena/elena/tree/main/packages/plugin-rollup-css",
+            link: "https://github.com/arielsalminen/elena/tree/main/packages/plugin-rollup-css",
           },
           {
             text: "@elenajs/mcp",
-            link: "https://github.com/getelena/elena/tree/main/packages/mcp",
+            link: "https://github.com/arielsalminen/elena/tree/main/packages/mcp",
           },
         ],
       },
@@ -200,20 +187,8 @@ export default defineConfig({
             link: "/advanced/faq",
           },
           {
-            text: "Team",
-            link: "/about/team",
-          },
-          {
-            text: "Sponsor",
-            link: "/about/sponsor",
-          },
-          {
             text: "Releases",
-            link: "https://github.com/getelena/elena/releases",
-          },
-          {
-            text: "Read the release post",
-            link: "https://arielsalminen.com/2026/progressive-web-components/",
+            link: "https://github.com/arielsalminen/elena/releases",
           },
           {
             text: "Code of conduct",
@@ -225,11 +200,11 @@ export default defineConfig({
           },
           {
             text: "Contributing",
-            link: "https://github.com/getelena/elena/blob/main/CONTRIBUTING.md",
+            link: "https://github.com/arielsalminen/elena/blob/main/CONTRIBUTING.md",
           },
           {
             text: "License (MIT)",
-            link: "https://github.com/getelena/elena/blob/main/LICENSE",
+            link: "https://github.com/arielsalminen/elena/blob/main/LICENSE",
           },
         ],
       },
@@ -280,10 +255,7 @@ export default defineConfig({
       },
     ],
 
-    socialLinks: [
-      { icon: "github", link: "https://github.com/getelena/elena" },
-      { icon: "discord", link: "https://discord.gg/7WGcdngTD7" },
-    ],
+    socialLinks: [{ icon: "github", link: "https://github.com/arielsalminen/elena" }],
 
     search: {
       provider: "local",
@@ -299,7 +271,7 @@ export default defineConfig({
     },
 
     editLink: {
-      pattern: "https://github.com/getelena/elena/edit/main/docs/:path",
+      pattern: "https://github.com/arielsalminen/elena/edit/main/docs/:path",
       text: "Edit this page on GitHub",
     },
 

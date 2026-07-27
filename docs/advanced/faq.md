@@ -31,80 +31,6 @@ It handles the cross-framework complexity (prop/attribute syncing, event delegat
 
 A [Progressive Web Component](/components/overview) is a native Custom Element designed in two layers: a base layer of HTML and CSS that renders immediately, without JavaScript, and an enhancement layer of JavaScript that adds reactivity, event handling, and more advanced templating.
 
-## How does Elena compare against other tools?
-
-### Elena vs Lit
-
-[Lit](https://lit.dev) is the most widely used web component library and a natural comparison point. Both share a similar foundation, extending native custom elements with tagged template literals for rendering, but differ significantly in approach:
-
-| | Elena | Lit |
-|---|---|---|
-| **DOM model** | Light DOM (Shadow DOM opt-in) | Shadow DOM |
-| **Size** | 2.9kB | ~5kB |
-| **Templating** | Native tagged template literals with auto-escaping | Custom reactive template engine with directives and binding syntax |
-| **Progressive enhancement** | HTML & CSS first, JavaScript enhances after | Requires JavaScript for rendering |
-| **SSR** | Works out of the box; optional `@elenajs/ssr` for components with `render()` | Requires `@lit-labs/ssr` |
-| **Style encapsulation** | `@scope` + `all: unset` (Shadow DOM opt-in) | Shadow DOM (`:host`, CSS parts) |
-| **Prop reflection** | Reflects all; disable per-prop | Reflects none; enable per-prop |
-| **Accessibility** | Full Light DOM access | Shadow DOM accessibility limitations |
-| **API** | Static class fields + reactive properties | Decorators + reactive properties |
-
-The biggest philosophical difference is the DOM model. Lit uses Shadow DOM by default for strong encapsulation; Elena uses Light DOM by default for accessibility, SSR, and CSS inheritance, with Shadow DOM available as an opt-in. 
-
-On the templating side, both use `html` tagged template literals, but Lit has a custom reactive template engine. Elena, on the other hand, provides just a thin wrapper around the native template literals.
-
-### Elena vs Stencil
-
-[Stencil](https://stenciljs.com) is a compiler that generates native web components, developed by the Ionic team. Unlike runtime libraries like Elena or Lit, Stencil is primarily a build tool. Components are authored in TypeScript + JSX and compiled to standalone custom elements:
-
-| | Elena | Stencil |
-|---|---|---|
-| **Approach** | Runtime mixin | Compiler |
-| **Size** | 2.9kB | ~5kB (lazy runtime; varies by output target) |
-| **Language** | Vanilla JavaScript or TypeScript | TypeScript + JSX |
-| **Build step** | Optional | Required |
-| **Templating** | Native tagged template literals with auto-escaping | JSX (compiled via TypeScript) |
-| **DOM model** | Light DOM (Shadow DOM opt-in) | Shadow DOM (default; configurable) |
-| **Progressive enhancement** | HTML & CSS first, JavaScript enhances after | Requires JavaScript for rendering |
-| **SSR** | Works out of the box; optional `@elenajs/ssr` for components with `render()` | Requires Stencil’s Hydrate app |
-| **Prop reflection** | Reflects all; disable per-prop | Reflects none; enable per-prop |
-| **Style encapsulation** | `@scope` + `all: unset` | Shadow DOM or scoped CSS |
-| **API** | Static class fields + reactive properties | Decorators + JSX |
-| **Output targets** | Not necessary | Custom elements, React, Angular, Vue wrappers |
-
-Stencil’s standout feature is its output targets: it can generate framework-specific wrappers (React, Angular, Vue) automatically from the same component source. If you need generated bindings for multiple frameworks, Stencil has a clear advantage. Elena, by contrast, works directly with any framework without generated wrappers.
-
-### Elena vs Enhance
-
-[Enhance](https://enhance.dev) is an HTML-first web component framework focused on server-side rendering. While both Elena and Enhance share a philosophy of progressive enhancement and Light DOM by default, they operate at very different levels: Elena is a client-side library for building standard web components, while Enhance renders components on the server as pure functions.
-
-| | Elena | Enhance |
-|---|---|---|
-| **Approach** | Runtime mixin | Server-side rendering |
-| **Size** | 2.9kB | No client runtime required; optional upgrade ~2-5kB |
-| **Language** | Vanilla JavaScript or TypeScript | JavaScript, or other language via WASM |
-| **Build step** | Optional | No compile step; requires Enhance SSR engine |
-| **Templating** | Native tagged template literals with auto-escaping | Pure functions returning HTML strings |
-| **DOM model** | Light DOM (Shadow DOM opt-in) | Light DOM (Shadow DOM opt-in) |
-| **Progressive enhancement** | HTML & CSS first, JavaScript enhances after | Server renders HTML, JavaScript optional |
-| **SSR** | Works out of the box; optional `@elenajs/ssr` for components with `render()` | Server rendering is the primary mode |
-| **Prop reflection** | Reflects all; disable per-prop | Standard `observedAttributes` on client side |
-| **Style encapsulation** | `@scope` + `all: unset` | Server-side selector prefixing |
-| **API** | Static class fields + reactive properties | Pure functions on server; optional class-based upgrade on client |
-| **Portability** | Standard custom elements, works anywhere | Backend-agnostic SSR via WASM; client upgrades are standard |
-
-The fundamental difference is scope. Elena is a standalone library that works directly in the browser and can be used in any environment: static HTML, any framework, any server. Enhance focuses on server-side rendering, with its WASM engine making it portable across backends.
-
-If you want a client-side library for building portable web components, Elena might be a better fit. If you want backend-agnostic server rendering for web components, Enhance offers that. The two projects share enough philosophy that they could complement each other well.
-
-## What is the performance like?
-
-Elena’s progressive approach gives it a significant edge on [First Contentful Paint (FCP)](https://web.dev/articles/fcp). Because Elena renders base HTML and CSS before JavaScript loads, the First Contentful Paint doesn’t depend on it at all. Once JavaScript has loaded and the components become interactive, the performance gap narrows though:
-
-<img src="/bench.webp" loading="lazy" width="2744" height="1640" alt="Elena bench test suite" />
-
-These are synthetic benchmarks that measure isolated operations. Real-world performance depends on what you’re building: how many components are on the page, how often they re-render, how complex your templates are, and how your styles are structured. The benchmarks can’t reveal the full picture, but they do show where Elena’s architecture pays off: your users see content before any JavaScript has executed.
-
 ## How is Elena tested?
 
 Elena has a comprehensive automated test suite with 1000+ tests across 57 test files covering unit tests, integration tests, visual diff tests, and benchmark tests:
@@ -153,7 +79,7 @@ Elena uses Light DOM by default, which means assistive technologies like screen 
 
 ## Is Elena production-ready?
 
-Elena is actively maintained, has a comprehensive test suite, and follows [Semantic Versioning](https://semver.org/). It was built from real-world experience shipping enterprise design systems. That said, Elena is still a young project and the API may evolve. Check the [changelog](https://github.com/getelena/elena/releases) for the latest updates.
+Elena is actively maintained, has a comprehensive test suite, and follows [Semantic Versioning](https://semver.org/). It was built from real-world experience shipping enterprise design systems. That said, Elena is still a young project and there may be bugs which we haven’t found just yet. Check the [changelog](https://github.com/arielsalminen/elena/releases) for the latest updates.
 
 ## What are you using to generate the documentation?
 
@@ -163,20 +89,10 @@ Elena’s documentation is built with [VitePress](https://vitepress.dev), a stat
 
 Elena follows [Semantic Versioning](https://semver.org/). Under this scheme, version numbers and the way they change convey meaning about the underlying features and what has been modified from one version to the next.
 
-## Can I sponsor Elena?
-
-Elena is an MIT-licensed open source project and completely free to use. However, we understand that the project won’t remain sustainable forever without financial backing. Hence, we’re planning to set up sponsorship at [Open Collective](https://opencollective.com/elenajs) later.
-
-If you have questions regarding the [sponsorship](/about/sponsor), please reach out to [hi@elenajs.com](mailto:hi@elenajs.com).
-
 ## How can I contribute?
 
-See the [contributing guidelines](https://github.com/getelena/elena/blob/main/CONTRIBUTING.md) on GitHub.
+See the [contributing guidelines](https://github.com/arielsalminen/elena/blob/main/CONTRIBUTING.md) on GitHub.
 
 ## I found a bug. How do I report it?
 
-First, make sure the bug is reproducible. Once confirmed, [create a new issue](https://github.com/getelena/elena/issues/new/choose) on GitHub.
-
-## I couldn’t find an answer to my question?
-
-If you couldn’t find an answer to your question, please don’t hesitate to join [Elena’s Discord server](https://discord.gg/7WGcdngTD7) to ask questions from the community.
+First, make sure the bug is reproducible. Once confirmed, [create a new issue](https://github.com/arielsalminen/elena/issues/new/choose) on GitHub.

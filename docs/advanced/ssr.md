@@ -27,7 +27,7 @@ Since both selectors now share the same baseline styles, there are no visible la
 
 ## Rendering to HTML strings <Badge type="danger" text="Experimental" />
 
-When you don’t want to handle the pre-hydration state with CSS, you can expand component templates inline using [@elenajs/ssr](https://github.com/getelena/elena/tree/main/packages/ssr). Please note that this is an experimental package and we do not recommend it for production just yet.
+When you don’t want to handle the pre-hydration state with CSS, you can expand component templates inline using [@elenajs/ssr](https://github.com/arielsalminen/elena/tree/main/packages/ssr). Please note that this is an experimental package and we do not recommend it for production just yet.
 
 > [!WARNING]
 > `@elenajs/ssr` is an experimental package and not yet ready for production use. APIs may change without notice.
@@ -280,7 +280,7 @@ Running `pnpm build` will generate the pre-rendered output.
 > [!TIP]
 > Use `await import()` for component modules rather than a static `import` statement. Elena components extend `HTMLElement`, which requires a Node.js shim that `@elenajs/ssr` installs when it loads. Dynamic imports guarantee the shim is in place first, regardless of how an import sorter may reorder your static imports.
 
-## Declarative Shadow DOM <Badge type="warning" text="Pre-release" />
+## Declarative Shadow DOM
 
 Declarative Shadow DOM lets you define a shadow root directly in HTML using a `<template shadowrootmode="open">` element. The browser attaches the shadow root during parsing, so the shadow content is visible before JavaScript loads.
 

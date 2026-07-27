@@ -1,5 +1,5 @@
 <template>
-  <a class="elena-star" href="https://github.com/getelena/elena">
+  <a class="elena-star" href="https://github.com/arielsalminen/elena">
     <span class="elena-star-heading">
       <span v-if="stars" class="elena-star-badge">
         <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true">
@@ -30,7 +30,7 @@ const stars = ref(null);
 
 onMounted(async () => {
   try {
-    const res = await fetch("https://api.github.com/repos/getelena/elena");
+    const res = await fetch("https://api.github.com/repos/arielsalminen/elena");
     const data = await res.json();
     if (data.stargazers_count != null) {
       stars.value = data.stargazers_count.toLocaleString();

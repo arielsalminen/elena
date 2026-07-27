@@ -95,7 +95,7 @@ This page demonstrates Elena’s [Progressive Web Components](/components/overvi
 
 <div class="elena-demo">
   <elena-stack direction="row">
-    <elena-button href="https://github.com/getelena/elena" variant="primary">Elena on GitHub</elena-button>
+    <elena-button href="https://github.com/arielsalminen/elena" variant="primary">Elena on GitHub</elena-button>
     <elena-button href="https://elenajs.com" target="_blank" icon="<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path stroke='none' d='M0 0h24v24H0z' fill='none'/><path d='M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6'/><path d='M11 13l9 -9'/><path d='M15 4h5v5'/></svg>">External</elena-button>
     <elena-button href="#file" download icon="<svg aria-hidden='true' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'><path stroke='none' d='M0 0h24v24H0z' fill='none'/><path d='M20 16a1 1 0 0 1 1 1v2a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3v-2a1 1 0 0 1 2 0v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1 -1v-2a1 1 0 0 1 1 -1m-8 -13a1 1 0 0 1 1 1v9.585l3.293 -3.292a1 1 0 0 1 1.414 1.414l-5 5a1 1 0 0 1 -.09 .08l.09 -.08a1 1 0 0 1 -.674 .292l-.033 .001h-.032l-.054 -.004l.086 .004a1 1 0 0 1 -.617 -.213a1 1 0 0 1 -.09 -.08l-5 -5a1 1 0 0 1 1.414 -1.414l3.293 3.292v-9.585a1 1 0 0 1 1 -1' /></svg>">Download</elena-button>
   </elena-stack>
@@ -191,7 +191,7 @@ This page demonstrates Elena’s [Progressive Web Components](/components/overvi
 
 ## Example library
 
-**[@elenajs/components](https://github.com/getelena/elena/tree/main/packages/components)** is a reference component library built with Elena. It demonstrates real-world component patterns and is available as a starting point for your own library.
+**[@elenajs/components](https://github.com/arielsalminen/elena/tree/main/packages/components)** is a reference component library built with Elena. It demonstrates real-world component patterns and is available as a starting point for your own library.
 
 ::: code-group
 
@@ -250,7 +250,7 @@ Or import the full CSS bundle:
 @import "@elenajs/components/dist/bundle.css";
 ```
 
-The source code is in `packages/components/` of the [Elena monorepo](https://github.com/getelena/elena) and serves as an example of how to structure, build, and publish a library with `@elenajs/bundler`.
+The source code is in `packages/components/` of the [Elena monorepo](https://github.com/arielsalminen/elena) and serves as an example of how to structure, build, and publish a library with `@elenajs/bundler`.
 
 ## Next steps
 

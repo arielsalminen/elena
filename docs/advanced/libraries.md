@@ -325,7 +325,7 @@ const registry = new CustomElementRegistry();
 defineAll(registry);
 ```
 
-The source code is in `packages/components/` of the [Elena monorepo](https://github.com/getelena/elena) and serves as an example of how to structure, build, and publish a library with `@elenajs/bundler`.
+The source code is in `packages/components/` of the [Elena monorepo](https://github.com/arielsalminen/elena) and serves as an example of how to structure, build, and publish a library with `@elenajs/bundler`.
 
 ## Next steps
 

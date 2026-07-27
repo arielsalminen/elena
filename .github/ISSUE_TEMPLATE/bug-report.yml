@@ -88,7 +88,7 @@ body:
     id: terms
     attributes:
       label: Before submitting
-      description: By submitting this issue, you agree to follow our [Contributing Guidelines](https://github.com/getelena/elena/blob/main/CONTRIBUTING.md).
+      description: By submitting this issue, you agree to follow our [Contributing Guidelines](https://github.com/arielsalminen/elena/blob/main/CONTRIBUTING.md).
       options:
         - label: I’ve searched for existing issues
           required: true

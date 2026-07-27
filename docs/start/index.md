@@ -191,7 +191,7 @@ Button.define();
 <my-button>Cancel</my-button>
 ```
 
-### 3. Declarative Components <Badge type="warning" text="Pre-release" />
+### 3. Declarative Components
 
 A Declarative Component utilizes Declarative Shadow DOM which lets you define a shadow root directly in HTML using a `<template shadowrootmode="open">` element. The browser attaches the shadow root during parsing, so the content is visible before JavaScript loads.
 
@@ -321,7 +321,7 @@ For more, see the [Framework Integration](/advanced/frameworks) examples.
 
 ## Bundling components
 
-[@elenajs/bundler](https://github.com/getelena/elena/tree/main/packages/bundler) is the build tool for Elena component libraries. It bundles JavaScript and TypeScript source files, minifies styles, generates a Custom Elements Manifest, and produces TypeScript declarations.
+[@elenajs/bundler](https://github.com/arielsalminen/elena/tree/main/packages/bundler) is the build tool for Elena component libraries. It bundles JavaScript and TypeScript source files, minifies styles, generates a Custom Elements Manifest, and produces TypeScript declarations.
 
 ::: code-group
 
@@ -394,7 +394,7 @@ For more, see the [Component Libraries](/advanced/libraries) guide.
 
 ## Command Line Interface
 
-[@elenajs/cli](https://github.com/getelena/elena/tree/main/packages/cli) scaffolds new Elena components interactively. It generates JavaScript, TypeScript, or single-file HTML source files with all Elena patterns pre-configured.
+[@elenajs/cli](https://github.com/arielsalminen/elena/tree/main/packages/cli) scaffolds new Elena components interactively. It generates JavaScript, TypeScript, or single-file HTML source files with all Elena patterns pre-configured.
 
 ::: code-group
 

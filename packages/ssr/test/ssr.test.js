@@ -189,7 +189,7 @@ describe("demo page markup", () => {
     const markup = `<h1>Elena</h1>
                 <p>
                   Demonstrating Elena's
-                  <a href="https://github.com/getelena/elena">Progressive Web Components</a> in plain HTML:
+                  <a href="https://github.com/arielsalminen/elena">Progressive Web Components</a> in plain HTML:
                 </p>
                 <!-- uses MIT licensed icons from https://tabler.io/icons -->
 
