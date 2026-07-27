@@ -24,6 +24,7 @@ minimumReleaseAge: 10080 # minutes (7 days)
 minimumReleaseAgeExclude:
   - "@elenajs/*"
   - happy-dom
+  - axios
 
 # Fail if a package’s trust level has decreased
 trustPolicy: no-downgrade
