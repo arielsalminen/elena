@@ -26,6 +26,4 @@ idea
 .sln
 .vsix
 lerna-debug.log
-CLAUDE.md
-.claude
 .vscode
