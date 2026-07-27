@@ -1,6 +1,6 @@
 {
   "name": "@elenajs/plugin-cem-typescript",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CEM analyzer plugin that generates per-component TypeScript declarations for Elena.",
   "author": "Elena <hi@elenajs.com>",
   "homepage": "https://elenajs.com/",

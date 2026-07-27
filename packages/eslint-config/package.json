@@ -1,6 +1,6 @@
 {
   "name": "@elenajs/eslint-config",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Shared ESLint config for Elena projects.",
   "author": "Elena <hi@elenajs.com>",
   "homepage": "https://elenajs.com/",

@@ -1,6 +1,6 @@
 {
   "name": "@elenajs/ssr",
-  "version": "1.0.0-alpha.10",
+  "version": "1.0.0-alpha.11",
   "description": "Render Elena components to HTML strings for server-side rendering.",
   "author": "Elena <hi@elenajs.com>",
   "homepage": "https://elenajs.com/",

@@ -1,6 +1,6 @@
 {
   "name": "@elenajs/plugin-rollup-css",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Rollup plugin that minifies individual CSS files and optionally concatenates them into a single bundle.",
   "author": "Elena <hi@elenajs.com>",
   "homepage": "https://elenajs.com/",

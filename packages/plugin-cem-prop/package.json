@@ -1,6 +1,6 @@
 {
   "name": "@elenajs/plugin-cem-prop",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CEM analyzer plugin that creates attribute entries from @property/@prop JSDoc tags.",
   "author": "Elena <hi@elenajs.com>",
   "homepage": "https://elenajs.com/",

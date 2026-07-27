@@ -1,6 +1,6 @@
 {
   "name": "@elenajs/cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Elena CLI for scaffolding Progressive Web Components.",
   "author": "Elena <hi@elenajs.com>",
   "homepage": "https://elenajs.com/",
