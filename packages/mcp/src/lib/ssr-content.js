@@ -38,7 +38,7 @@ Sometimes you may need access to more than just the initial text content pre-hyd
 
 ## Rendering to HTML strings
 
-When you don't want to handle the pre-hydration state with CSS, you can expand component templates inline using [\`@elenajs/ssr\`](https://github.com/getelena/elena/tree/main/packages/ssr). Please note that this is an experimental package and we do not recommend it for production just yet.
+When you don't want to handle the pre-hydration state with CSS, you can expand component templates inline using [\`@elenajs/ssr\`](https://github.com/arielsalminen/elena/tree/main/packages/ssr). Please note that this is an experimental package and we do not recommend it for production just yet.
 
 > **Warning:** \`@elenajs/ssr\` is an experimental package and not yet ready for production use. APIs may change without notice.
 
