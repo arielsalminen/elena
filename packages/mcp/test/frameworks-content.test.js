@@ -38,8 +38,8 @@ describe("FRAMEWORKS_CONTENT", () => {
   });
 
   it("includes example project links", () => {
-    expect(FRAMEWORKS_CONTENT).toContain("github.com/getelena/html-example-project");
-    expect(FRAMEWORKS_CONTENT).toContain("github.com/getelena/react-example-project");
-    expect(FRAMEWORKS_CONTENT).toContain("github.com/getelena/angular-example-project");
+    expect(FRAMEWORKS_CONTENT).toContain("github.com/arielsalminen/html-example-project");
+    expect(FRAMEWORKS_CONTENT).toContain("github.com/arielsalminen/react-example-project");
+    expect(FRAMEWORKS_CONTENT).toContain("github.com/arielsalminen/angular-example-project");
   });
 });

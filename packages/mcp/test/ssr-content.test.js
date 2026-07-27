@@ -39,8 +39,8 @@ describe("SSR_CONTENT", () => {
   });
 
   it("includes framework example project links", () => {
-    expect(SSR_CONTENT).toContain("github.com/getelena/eleventy-example-project");
-    expect(SSR_CONTENT).toContain("github.com/getelena/html-example-project");
-    expect(SSR_CONTENT).toContain("github.com/getelena/next-example-project");
+    expect(SSR_CONTENT).toContain("github.com/arielsalminen/eleventy-example-project");
+    expect(SSR_CONTENT).toContain("github.com/arielsalminen/html-example-project");
+    expect(SSR_CONTENT).toContain("github.com/arielsalminen/next-example-project");
   });
 });
