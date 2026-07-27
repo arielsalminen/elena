@@ -1,0 +1,89 @@
+[functions]
+  node_bundler = "esbuild"
+
+[[headers]]
+  for = "*"
+  [headers.values]
+    Cache-Control = "max-age=3600,public,must-revalidate"
+
+[[headers]]
+  for = "*.html"
+  [headers.values]
+    Cache-Control = "max-age=3600,public,must-revalidate"
+
+[[headers]]
+  for = "*.pdf"
+  [headers.values]
+    Cache-Control = "max-age=3600,public,must-revalidate"
+
+[[headers]]
+  for = "*.txt"
+  [headers.values]
+    Cache-Control = "max-age=3600,public,must-revalidate"
+    Content-Type = "text/plain; charset=utf-8"
+
+[[headers]]
+  for = "*.md"
+  [headers.values]
+    Cache-Control = "max-age=3600,public,must-revalidate"
+    Content-Type = "text/x-markdown; charset=utf-8"
+
+[[headers]]
+  for = "*.css"
+  [headers.values]
+    Cache-Control = "max-age=31536000,public,must-revalidate"
+
+[[headers]]
+  for = "*.xml"
+  [headers.values]
+    Cache-Control = "max-age=3600,public,must-revalidate"
+
+[[headers]]
+  for = "*.json"
+  [headers.values]
+    Cache-Control = "max-age=3600,public,must-revalidate"
+
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Cache-Control = "max-age=31536000,public,must-revalidate"
+
+[[headers]]
+  for = "*.jpg"
+  [headers.values]
+    Cache-Control = "max-age=31536000,public,must-revalidate"
+
+[[headers]]
+  for = "*.webp"
+  [headers.values]
+    Cache-Control = "max-age=31536000,public,must-revalidate"
+
+[[headers]]
+  for = "*.png"
+  [headers.values]
+    Cache-Control = "max-age=31536000,public,must-revalidate"
+
+[[headers]]
+  for = "*.gif"
+  [headers.values]
+    Cache-Control = "max-age=31536000,public,must-revalidate"
+
+[[headers]]
+  for = "*.svg"
+  [headers.values]
+    Cache-Control = "max-age=31536000,public,must-revalidate"
+
+[[headers]]
+  for = "*.woff"
+  [headers.values]
+    Cache-Control = "max-age=31536000,public,must-revalidate"
+
+[[headers]]
+  for = "*.woff2"
+  [headers.values]
+    Cache-Control = "max-age=31536000,public,must-revalidate"
+
+[[headers]]
+  for = "*.ico"
+  [headers.values]
+    Cache-Control = "max-age=31536000,public,must-revalidate"
