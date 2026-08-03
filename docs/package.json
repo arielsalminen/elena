@@ -15,7 +15,7 @@
     "@codemirror/view": "6.41.0",
     "codemirror": "6.0.2",
     "markdown-it-footnote": "4.0.0",
-    "vitepress": "1.6.4",
-    "vitepress-plugin-llms": "1.12.0"
+    "vitepress": "2.0.0-alpha.18",
+    "vitepress-plugin-llms": "1.13.3"
   }
 }

@@ -12,6 +12,7 @@
     system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --vp-font-family-mono: Menlo, ui-monospace, SFMono-Regular, Monaco, Consolas, monospace;
+  --vp-code-lang-color: var(--vp-c-text-3);
 }
 
 .vp-logo {
@@ -161,8 +162,17 @@ label:active {
   padding-bottom: 32px;
 }
 
-#local-search {
+.VPNavBarSearchButton {
   min-inline-size: calc(100% - 2rem);
+  block-size: 40px;
+  padding-block: 0;
+  padding-inline: 12px 10px;
+  border: 1px solid transparent;
+  font-weight: 500;
+}
+
+.VPNavBarSearchButton .vpi-search {
+  font-size: 17px;
 }
 
 .VPNavBarMenuLink.active {
@@ -204,12 +214,13 @@ label:active {
   z-index: 2;
 }
 
-.DocSearch-Button {
-  justify-content: space-between;
+.VPNavBarSearchButton .keys {
+  margin-inline-start: auto;
+  gap: 1px;
 }
 
 @media (max-width: 767px) {
-  .DocSearch-Button {
+  .VPNavBarSearchButton {
     justify-content: flex-end;
   }
 }
@@ -476,6 +487,10 @@ label:active {
 
 sup {
   position: absolute;
+  inset-block-start: auto;
+  line-height: inherit;
+  font-size: smaller;
+  vertical-align: super;
   transform: translateX(3px) translateY(-4px);
 }
 
