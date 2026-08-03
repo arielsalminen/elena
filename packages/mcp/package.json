@@ -38,6 +38,6 @@
     "zod": "4.3.6"
   },
   "devDependencies": {
-    "vitest": "4.1.2"
+    "vitest": "4.1.10"
   }
 }

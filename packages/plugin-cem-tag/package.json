@@ -35,6 +35,6 @@
   "devDependencies": {
     "@custom-elements-manifest/analyzer": "0.11.0",
     "@elenajs/plugin-cem-define": "workspace:*",
-    "vitest": "4.1.2"
+    "vitest": "4.1.10"
   }
 }
