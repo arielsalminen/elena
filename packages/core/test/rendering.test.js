@@ -320,6 +320,20 @@ describe("rendering", () => {
       await el.updateComplete;
       expect(slotted.textContent).toBe("updated");
     });
+
+    it("morph keeps hydrated attribute on nested components", async () => {
+      const el = createElement("nested-element");
+      const nestedEls = ["child-element", "wrapper-element", "shadow-slot-element"];
+      nestedEls.forEach(nestedEl =>
+        expect(el.querySelector(nestedEl).hasAttribute("hydrated")).toBe(true)
+      );
+
+      el.setAttribute("extra", "");
+      await el.updateComplete;
+      nestedEls.forEach(nestedEl =>
+        expect(el.querySelector(nestedEl).hasAttribute("hydrated")).toBe(true)
+      );
+    });
   });
 
   describe("template cache lifecycle", () => {
