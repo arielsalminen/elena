@@ -264,6 +264,11 @@ function morphContent(parent, nextNodes) {
       }
     } else if (cur.nodeType === ELEMENT_NODE) {
       morphAttributes(cur, nxt);
+
+      // Don't morph child content of Elena elements that render Light DOM template
+      if (cur._templateStrings) {
+        continue;
+      }
       morphContent(cur, nxt.childNodes);
     }
   }
