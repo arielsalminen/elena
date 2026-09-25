@@ -6,6 +6,7 @@ import "./fixtures/basic-element.js";
 import "./fixtures/attr-element.js";
 import "./fixtures/multiline-element.js";
 import "./fixtures/complex-element.js";
+import "./fixtures/nested-element.js";
 
 const multiValueTemplate = Object.assign(
   ["<span class='one'>", "</span><span class='two'>", "</span><span class='three'>", "</span>"],
@@ -268,6 +269,56 @@ describe("rendering", () => {
       // Inner element should be same object
       expect(el.element).toBe(innerEl);
       expect(el.querySelector(".inner")).toBe(innerEl);
+    });
+  });
+
+  describe("morphing nested components", () => {
+    it("morph preserves nested component's rendered content", async () => {
+      const el = createElement("nested-element");
+      const child = el.querySelector("child-element");
+      const childInner = child.querySelector(".child-inner");
+      expect(childInner.textContent).toBe("default");
+      expect(el.querySelector(".extra")).toBeNull();
+
+      // attribute that doesn't change child component
+      el.setAttribute("extra", "");
+      await el.updateComplete;
+      expect(el.querySelector(".extra")).not.toBeNull();
+      expect(el.querySelector("child-element")).toBe(child);
+      expect(child.querySelector(".child-inner")).toBe(childInner);
+      expect(childInner.textContent).toBe("default");
+    });
+
+    it("morph updates nested component's rendered content", async () => {
+      const el = createElement("nested-element");
+      const child = el.querySelector("child-element");
+      expect(child.textContent).toBe("default");
+
+      el.setAttribute("variant", "updated");
+      await el.updateComplete;
+      expect(child.getAttribute("variant")).toBe("updated");
+      expect(child.variant).toBe("updated");
+      expect(child.textContent).toBe("updated");
+    });
+
+    it("morph updates slotted children of nested composite component", async () => {
+      const el = createElement("nested-element");
+      const wrapped = el.querySelector("wrapper-element .wrapped");
+      expect(wrapped.textContent).toBe("default");
+
+      el.setAttribute("variant", "updated");
+      await el.updateComplete;
+      expect(wrapped.textContent).toBe("updated");
+    });
+
+    it("morph updates slotted children of nested shadow DOM component", async () => {
+      const el = createElement("nested-element");
+      const slotted = el.querySelector("shadow-slot-element .slotted");
+      expect(slotted.textContent).toBe("default");
+
+      el.setAttribute("variant", "updated");
+      await el.updateComplete;
+      expect(slotted.textContent).toBe("updated");
     });
   });
 
