@@ -284,6 +284,11 @@ function morphAttributes(current, next) {
   for (let i = current.attributes.length - 1; i >= 0; i--) {
     const { name } = current.attributes[i];
 
+    // Don't strip "hydrated" from Elena elements
+    if (name === "hydrated" && current._hydrated) {
+      continue;
+    }
+
     if (!next.hasAttribute(name)) {
       current.removeAttribute(name);
     }
