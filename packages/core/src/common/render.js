@@ -264,6 +264,11 @@ function morphContent(parent, nextNodes) {
       }
     } else if (cur.nodeType === ELEMENT_NODE) {
       morphAttributes(cur, nxt);
+
+      // Don't morph child content of Elena elements that render Light DOM template
+      if (cur._templateStrings) {
+        continue;
+      }
       morphContent(cur, nxt.childNodes);
     }
   }
@@ -278,6 +283,11 @@ function morphContent(parent, nextNodes) {
 function morphAttributes(current, next) {
   for (let i = current.attributes.length - 1; i >= 0; i--) {
     const { name } = current.attributes[i];
+
+    // Don't strip "hydrated" from Elena elements
+    if (name === "hydrated" && current._hydrated) {
+      continue;
+    }
 
     if (!next.hasAttribute(name)) {
       current.removeAttribute(name);
