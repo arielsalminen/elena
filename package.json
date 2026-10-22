@@ -46,7 +46,7 @@
     "happy-dom": "20.8.9",
     "lerna": "9.0.7",
     "prettier": "3.8.1",
-    "vitest": "4.1.10"
+    "vitest": "5.0.5"
   },
   "scripts": {
     "build": "NX_TASKS_RUNNER_DYNAMIC_OUTPUT=false lerna run build",
